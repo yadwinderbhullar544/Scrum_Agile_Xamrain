@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scrum_Agile_Xamrain.Create_Story" Title="Create Story">
+  <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="20,0,20,0">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+
+
+                        <Label Text="Welcome "   />
+                        <Label Text="" x:Name="lbl_username"  TextColor="Red"/>
+
+
+
+                    </StackLayout> 
+
+                    <Label Margin="0,0,0,10" Text="New Story" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+
+                    <Picker x:Name="myPicker" ItemDisplayBinding="{Binding Name}" Title="Select a Project" />
+
+                    <Entry x:Name="txtStoryId" Placeholder="StoryId Update"></Entry>
+                    <Entry x:Name="txtName" Placeholder="Enter Story Name" ></Entry>
+
+
+                    <Editor x:Name="txtDescription" Placeholder="Enter Short Description" HeightRequest="100" ></Editor>
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnAdd" WidthRequest="180" Text="Save Story"  Clicked="btnAdd_Clicked" IsVisible="False" />
+                        <Button x:Name="btnShow" WidthRequest="180" Text="Show Data"  Clicked="btnShow_Clicked" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnUpdate" WidthRequest="180" Text="Update" Clicked="btnUpdate_Clicked" IsVisible="False"/>
+                        <Button x:Name="btnDelete" WidthRequest="180" Text="Delete" Clicked="btnDelete_Clicked" IsVisible="False"/>
+                    </StackLayout>
+
+
+
+
+
+                    <ListView x:Name="lstStory">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Name}" Detail="{Binding StoryID}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

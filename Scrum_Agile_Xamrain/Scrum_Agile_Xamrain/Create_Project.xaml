@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scrum_Agile_Xamrain.Create_Project" Title="Create Projects">
+  <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="20,0,20,0">
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+
+
+                    </StackLayout>
+
+                    <Label Margin="0,0,0,10" Text="Project" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                    <Entry x:Name="txtProjectId" Placeholder="ProjectId Update"></Entry>
+                    <Entry x:Name="txtName" Placeholder="Enter Project Name"></Entry>
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnAdd" WidthRequest="180" Text="Add"  Clicked="btnAdd_Clicked" BackgroundColor="SkyBlue" />
+                        <Button x:Name="btnShow" WidthRequest="180" Text="Show All"  Clicked="btnShow_Clicked" BackgroundColor="SkyBlue" />
+
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnUpdate" WidthRequest="180" Text="Update" Clicked="btnUpdate_Clicked" BackgroundColor="SkyBlue"/>
+                        <Button x:Name="btnDelete" WidthRequest="180" Text="Delete"  Clicked="btnDelete_Clicked" BackgroundColor="SkyBlue"/>
+                    </StackLayout>
+                    <ListView x:Name="lstProject" >
+                        <ListView.ItemTemplate >
+                            <DataTemplate >
+                                <TextCell Text="{Binding Name}" Detail="{Binding ProjectID}"></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

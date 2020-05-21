@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scrum_Agile_Xamrain.MainPage" Title="Story Management Using Agile Methodology">
+
+    <ContentPage.Content>
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="20,0,20,0">
+               
+                <Image Margin="0,0,0,10" HeightRequest="100" Source="icon.png" ></Image>
+                <Label Margin="0,0,0,10" Text="Agile Scrum" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+               
+                <Entry x:Name="txtName" Placeholder="Enter Person Name"></Entry>
+                <Entry x:Name="txtPass" Placeholder="Enter Password" IsPassword="True"></Entry>
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="200" Text="Register" Clicked="BtnAdd_Clicked" />
+                    <Button x:Name="btnRead" WidthRequest="200" Text="Login" Clicked="BtnRead_Clicked" />
+                </StackLayout>
+                  
+
+
+                </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
